@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nilambur - History & Heritage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Main Desktop Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- About Header -->
+    <header class="hero"
+        style="height: 60vh; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920');">
+        <h1 style="font-size: 3.5rem;">Nilambur Stories</h1>
+        <p style="max-width: 800px; margin: 1rem auto; padding: 0 5%;">Nilambur is not just a town; it is a story
+            written in teak leaves and river songs. From its royal heritage and historic plantations to its modern
+            eco-tourism initiatives, Nilambur stands as a perfect blend of history and nature.</p>
+    </header>
+
+
+    <section id="stories">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 4rem 5%;">
+
+            <!-- Intro Paragraph -->
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 class="section-title">Nilambur – Old Stories & New Stories</h2>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dark); opacity: 0.9;">
+                    Nilambur, often called the “Land of Teak Plantations,” is a beautiful town in Malappuram district,
+                    Kerala. Surrounded by lush forests and flowing rivers, Nilambur is a place where history and nature
+                    live together in harmony.
+                </p>
+            </div>
+
+            <!-- Old Stories -->
+            <div style="margin-bottom: 6rem;">
+                <h3
+                    style="font-size: 2rem; color: var(--primary); margin-bottom: 2.5rem; display: flex; align-items: center;">
+                    <i class="fas fa-history" style="margin-right: 15px;"></i> Old Stories of Nilambur
+                </h3>
+
+                <div class="story-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                    <div>
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem;">1. The Royal Legacy – Nilambur Kovilakam
+                        </h4>
+                        <p style="opacity: 0.8; line-height: 1.7;">The history of Nilambur is closely connected with the
+                            royal family of Nilambur Kovilakam. During the British period, the royal family played a
+                            major role in protecting forests and promoting teak cultivation. Because of this effort,
+                            Nilambur became famous as a major center for teak plantations in India.</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6199fbfd00?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);">
+                </div>
+
+                <div class="story-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                    <img src="https://images.unsplash.com/photo-1590424753042-95bc416515ed?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; border-radius: 20px; box-shadow: var(--shadow); grid-column: 1; grid-row: 1;">
+                    <div style="grid-column: 2; grid-row: 1;">
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem;">2. Conolly's Plot – The World’s First Teak
+                            Plantation</h4>
+                        <p style="opacity: 0.8; line-height: 1.7;">In the 1840s, British Collector H. V. Conolly started
+                            one of the world’s first planned teak plantations here. Even today, visitors can see teak
+                            trees that are over 150 years old. Conolly’s Plot remains one of Nilambur’s proud historical
+                            landmarks.</p>
+                    </div>
+                </div>
+
+                <div class="story-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                    <div>
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem;">3. Chaliyar River – The Lifeline of Nilambur
+                        </h4>
+                        <p style="opacity: 0.8; line-height: 1.7;">The Chaliyar River is the heart of Nilambur. In
+                            earlier times, massive teak logs were transported through the river by floating them
+                            downstream. The river supported the livelihoods, culture, and daily life of the local people
+                            for generations.</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);">
+                </div>
+
+                <div class="story-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <img src="https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; border-radius: 20px; box-shadow: var(--shadow); grid-column: 1; grid-row: 1;">
+                    <div style="grid-column: 2; grid-row: 1;">
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem;">4. Adyanpara Waterfalls – Nature’s Hidden
+                            Treasure</h4>
+                        <p style="opacity: 0.8; line-height: 1.7;">Adyanpara Waterfalls is one of the most beautiful
+                            natural attractions in Nilambur. Surrounded by rocky hills and forests, it becomes
+                            especially powerful and breathtaking during the monsoon season. It is not just a tourist
+                            spot, but also a symbol of Nilambur’s raw natural beauty.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 1px; background: rgba(0,0,0,0.1); margin: 4rem 0;"></div>
+
+            <!-- New Stories -->
+            <div>
+                <h3
+                    style="font-size: 2rem; color: var(--primary); margin-bottom: 2.5rem; display: flex; align-items: center;">
+                    <i class="fas fa-leaf" style="margin-right: 15px;"></i> New Stories of Nilambur
+                </h3>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+                    <a href="story-teak-museum.html" style="text-decoration: none; color: inherit;">
+                        <div style="background: var(--white); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); text-align: center; height: 100%; transition: var(--transition);"
+                            class="story-card">
+                            <i class="fas fa-landmark"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h4 style="margin-bottom: 1rem;">Teak Museum</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">The only museum in India dedicated to teak.
+                                Learn about history, growth, and scientific importance.</p>
+                        </div>
+                    </a>
+                    <a href="story-eco-tourism.html" style="text-decoration: none; color: inherit;">
+                        <div style="background: var(--white); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); text-align: center; height: 100%; transition: var(--transition);"
+                            class="story-card">
+                            <i class="fas fa-mountain"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h4 style="margin-bottom: 1rem;">Eco-Tourism</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Forest walks and bird watching. Protected
+                                forests welcoming responsible tourism.</p>
+                        </div>
+                    </a>
+                    <a href="story-growth.html" style="text-decoration: none; color: inherit;">
+                        <div style="background: var(--white); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); text-align: center; height: 100%; transition: var(--transition);"
+                            class="story-card">
+                            <i class="fas fa-city"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h4 style="margin-bottom: 1rem;">Growth</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Preserving traditional charm while growing in
+                                healthcare and infrastructure.</p>
+                        </div>
+                    </a>
+                    <a href="story-scenic-railway.html" style="text-decoration: none; color: inherit;">
+                        <div style="background: var(--white); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); text-align: center; height: 100%; transition: var(--transition);"
+                            class="story-card">
+                            <i class="fas fa-train"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h4 style="margin-bottom: 1rem;">Scenic Rail</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">The Nilambur-Shoranur route is one of the most
+                                scenic railway lines in Kerala.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Conclusion Quote -->
+            <div
+                style="margin-top: 6rem; padding: 3rem; background: var(--primary); color: white; border-radius: 30px; text-align: center; position: relative; overflow: hidden;">
+                <i class="fas fa-quote-left"
+                    style="position: absolute; top: 10px; left: 20px; font-size: 4rem; opacity: 0.1;"></i>
+                <p style="font-size: 1.5rem; font-style: italic; line-height: 1.6; position: relative; z-index: 1;">
+                    "The Chaliyar River flows through its heart, carrying centuries of memories, while the forests
+                    whisper stories of strength and beauty."
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mobile Responsive Adjustments -->
+    <style>
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+                text-align: center;
+            }
+
+            .story-grid img {
+                order: -1;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem !important;
+            }
+        }
+    </style>
+
+
+    <!-- Visitor Reviews Section -->
+    <section class="visitor-reviews" style="padding: 6rem 5%; background: var(--white);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span
+                    style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Testimonials</span>
+                <h2 style="font-size: 3rem; margin-top: 1rem;">What Visitors Say About Nilambur</h2>
+                <p style="opacity: 0.7; max-width: 600px; margin: 1.5rem auto;">Real stories and experiences from
+                    travelers who explored the Nilambur teak forest and its hidden wonders.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem;">
+
+                <!-- Review 1 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"Standing amidst the giant
+                        trees in <strong>Conolly’s Plot</strong> was a humbling experience. You can actually feel the
+                        history in the air. A must-visit for anyone who loves nature and history."</p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Anjali Menon, <span
+                            style="font-weight: 400; opacity: 0.6;">Solo Traveler</span></div>
+                </div>
+
+                <!-- Review 2 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"The <strong>Teak
+                            Museum</strong> exceeded our expectations. Our kids were fascinated by the butterfly garden
+                        and the giant root exhibit. It's the best educational trip for families in Malappuram."</p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— David Miller, <span
+                            style="font-weight: 400; opacity: 0.6;">Family Vacation</span></div>
+                </div>
+
+                <!-- Review 3 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"As a photographer, the
+                        morning mist over the <strong>Chaliyar River</strong> provided some of my best shots of
+                        <strong>Nilambur tourism</strong>. The light filtering through the dense canopy is just
+                        magical."
+                    </p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Rahul Sharma, <span
+                            style="font-weight: 400; opacity: 0.6;">Wildlife Photographer</span></div>
+                </div>
+
+                <!-- Review 4 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"The train journey from
+                        Shoranur to Nilambur is pure nostalgia. The station is so peaceful, tucked away in the greenery.
+                        It's the most refreshing <strong>Nilambur travel experience</strong> I've ever had."</p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Priya Das, <span
+                            style="font-weight: 400; opacity: 0.6;">Nature Lover</span></div>
+                </div>
+
+                <!-- Review 5 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"We visited
+                        <strong>Nedumkayam</strong> and were lucky enough to spot a herd of wild elephants near the
+                        river! The forest guides are very knowledgeable. Truly one of the <strong>best places to visit
+                            in Nilambur</strong>."
+                    </p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Thomas K. Jose, <span
+                            style="font-weight: 400; opacity: 0.6;">Adventurer</span></div>
+                </div>
+
+                <!-- Review 6 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"The local food here is
+                        amazing, especially the Malabar biryani. Sitting by the Chaliyar banks eating local snacks was
+                        the highlight of our trip. Such a soulful experience."</p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Sneha Kapoor, <span
+                            style="font-weight: 400; opacity: 0.6;">Food & Travel Blogger</span></div>
+                </div>
+
+                <!-- Review 7 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"I've traveled to many
+                        forests, but the <strong>Nilambur teak forest</strong> has a unique majesty. It's clean, quiet,
+                        and incredibly well-preserved. Highly recommended for soul-searching."</p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Michael R., <span
+                            style="font-weight: 400; opacity: 0.6;">Backpacker</span></div>
+                </div>
+
+                <!-- Review 8 -->
+                <div
+                    style="background: #fdfdfd; padding: 2.5rem; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
+                    <div style="color: #ffc107; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p style="font-style: italic; line-height: 1.7; margin-bottom: 1.5rem;">"Adyanpara waterfalls were
+                        so refreshing! We spent the whole afternoon there. The people in Nilambur are so welcoming and
+                        the hospitality is top-notch."</p>
+                    <div style="font-weight: 800; font-size: 0.9rem;">— Arya Sundar, <span
+                            style="font-weight: 400; opacity: 0.6;">Student Group</span></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact-cta" style="padding: 6rem 5%; background: #f8fcf8;">
+        <div
+            style="max-width: 1200px; margin: 0 auto; background: linear-gradient(135deg, #1d3557 0%, #000 100%); border-radius: 40px; padding: 5rem; display: flex; align-items: center; justify-content: space-between; overflow: hidden; position: relative;">
+            <div style="position: relative; z-index: 2; max-width: 600px; color: white;">
+                <h2 style="font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.1;">Want to know more about our
+                    heritage?</h2>
+                <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 2.5rem;">Reach out to us for detailed
+                    historical guides or to plan your cultural tour of Nilambur.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="contact.html" class="btn"
+                        style="background: white; color: #1d3557; padding: 1.2rem 2.5rem; border-radius: 15px; font-weight: 800;">Get
+                        in Touch</a>
+                </div>
+            </div>
+            <!-- Decorative Icon -->
+            <i class="fas fa-landmark"
+                style="position: absolute; right: -50px; bottom: -50px; font-size: 25rem; color: white; opacity: 0.03; transform: rotate(-15deg);"></i>
+        </div>
+    </section>
+
+
+                <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+
+
+
+</body>
+
+</html>

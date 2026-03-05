@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful Places in Nilambur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .listing-item {
+            display: flex;
+            gap: 2rem;
+            background: var(--white);
+            margin-bottom: 2rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .listing-img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .listing-info {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .listing-map {
+            width: 300px;
+            height: 250px;
+        }
+
+        .category-tab {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 0.5rem 1.5rem;
+            background: #eee;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 900px) {
+            .listing-item {
+                flex-direction: column;
+            }
+
+            .listing-img,
+            .listing-map {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Main Desktop Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Category Nav -->
+    <div class="category-nav">
+        <div class="category-container">
+            <a href="shops.html">SHOP</a>
+            <a href="places.html">PLACES TO VISIT</a>
+            <a href="stay.html">PLACES TO STAY</a>
+            <a href="restaurant.html">RESTAURANTS</a>
+            <a href="fuel.html">FUEL STATIONS</a>
+            <a href="listing.html">LISTING</a>
+        </div>
+    </div>
+
+    <section>
+        <h2 class="section-title">Directory</h2>
+
+        <div class="category-tab">
+            <div class="tab active" onclick="filterListings('all')">All</div>
+            <div class="tab" onclick="filterListings('stay')">Places to Stay</div>
+            <div class="tab" onclick="filterListings('restaurant')">Restaurants</div>
+            <div class="tab" onclick="filterListings('fuel')">Fuel Stations</div>
+            <div class="tab" onclick="filterListings('tourist')">Tourist Help</div>
+            <div class="tab" onclick="filterListings('shop')">Shops</div>
+        </div>
+
+        <div id="search-status"
+            style="display: none; padding: 1rem 1.5rem; background: rgba(45, 90, 39, 0.1); border-radius: 12px; margin: 1rem 0 2rem; border-left: 4px solid var(--primary); display: flex; justify-content: space-between; align-items: center;">
+            <p style="margin: 0; font-size: 0.95rem;"> Showing results for: <strong id="active-search-text"></strong>
+            </p>
+            <a href="listing.html"
+                style="color: var(--orange); text-decoration: none; font-weight: 600; font-size: 0.9rem;">Clear
+                Filters</a>
+        </div>
+
+        <div id="no-results"
+            style="display: none; text-align: center; padding: 4rem 2rem; background: var(--white); border-radius: 20px; box-shadow: var(--shadow);">
+            <i class="fas fa-search" style="font-size: 3rem; color: #ddd; margin-bottom: 1.5rem;"></i>
+            <h3>No listings found</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Try adjusting your search or category filters.</p>
+            <a href="listing.html" class="btn" style="margin-top: 2rem;">Show All Listings</a>
+        </div>
+
+        <div id="listings-container">
+
+            <div class="listing-item stay">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Rosewood Residency">
+                <div class="listing-info">
+                    <div class="card-title">Rosewood Residency</div>
+                    <p>Luxury and comfort in the heart of Nilambur town.<br><strong>Timings Check-in: 12:00
+                            PM</strong><br><strong><i class="fas fa-tag">
+                                Price/Fee From ₹3,500 / Night</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Main Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item stay">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Teak Town Homestay">
+                <div class="listing-info">
+                    <div class="card-title">Teak Town Homestay</div>
+                    <p>Experience traditional Nilambur hospitality at its best.<br><strong>Timings
+                            Check-in: 02:00 PM</strong><br><strong><i class="fas fa-tag"> Price/Fee From ₹4,500 /
+                                Night</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Kakkadampoyil, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item stay">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Riverview Retreat">
+                <div class="listing-info">
+                    <div class="card-title">Riverview Retreat</div>
+                    <p>A peaceful stay right along the banks of the Chaliyar.<br><strong>Timings Check-in: 01:00
+                            PM</strong><br><strong><i class="fas fa-tag"> Price/Fee From ₹3,800 / Night</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Kakkadampoyil Hills
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item stay">
+                <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Nilambur Manor">
+                <div class="listing-info">
+                    <div class="card-title">Nilambur Manor</div>
+                    <p>Modern amenities with a touch of royal heritage.<br><strong>Timings
+                            Check-in: 11:00 AM</strong><br><strong><i class="fas fa-tag"> Price/Fee From ₹1,800 /
+                                Night</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> River Side, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item stay">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Green Garden Resort">
+                <div class="listing-info">
+                    <div class="card-title">Green Garden Resort</div>
+                    <p>Stay
+                        surrounded by lush greenery and private gardens.<br><strong>Timings 24/7
+                            Service</strong><br><strong><i class="fas fa-tag"> Price/Fee From ₹2,500 / Night</strong>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Karulai, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item stay">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Jungle Edge Farmhouse">
+                <div class="listing-info">
+                    <div class="card-title">Jungle Edge Farmhouse</div>
+                    <p>A unique farmhouse experience on the edge of the forest.<br><strong>Timings Check-in: 12:00
+                            PM</strong><br><strong><i class="fas fa-tag"> Price/Fee From ₹1,200 / Night</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> City Center, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Town Kitchen">
+                <div class="listing-info">
+                    <div class="card-title">Town Kitchen</div>
+                    <p>Multi-cuisine delights in the heart of the city.<br><strong>Timings 11:00 AM
+                            - 11:00 PM</strong><br><strong><i class="fas fa-tag"> Price/Fee ₹500 for two
+                                (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Bypass Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Malabar Cafe">
+                <div class="listing-info">
+                    <div class="card-title">Malabar Cafe</div>
+                    <p>Authentic Malabar flavors and local delicacies.<br><strong>Timings 12:00 PM - 10:00
+                            PM</strong><br><strong><i class="fas fa-tag">
+                                Price/Fee ₹400 for two (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Teak Museum Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Woodbine Restaurant">
+                <div class="listing-info">
+                    <div class="card-title">Woodbine Restaurant</div>
+                    <p>Dining with a serene view of nature.<br><strong>Timings 07:30 AM - 09:30
+                            PM</strong><br><strong><i class="fas fa-tag">
+                                Price/Fee ₹250 for two (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Town Square, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e03ad3?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Highway Dine">
+                <div class="listing-info">
+                    <div class="card-title">Highway Dine</div>
+                    <p>The perfect pitstop for travelers on the move.<br><strong>Timings 08:00 AM -
+                            10:00 PM</strong><br><strong><i class="fas fa-tag"> Price/Fee ₹350 for two (Approx)</strong>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Janathapadi, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Spice Village">
+                <div class="listing-info">
+                    <div class="card-title">Spice Village</div>
+                    <p>Explore the world through our spicy specialties.<br><strong>Timings 04:00 PM - 12:00
+                            AM</strong><br><strong><i class="fas fa-tag"> Price/Fee ₹300 for two (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Near Railway Station,
+                        Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Coffee House">
+                <div class="listing-info">
+                    <div class="card-title">Coffee House</div>
+                    <p>Vintage vibes and classic South Indian tastes.<br><strong>Timings
+                            12:00 PM - 12:00 AM</strong><br><strong><i class="fas fa-tag"> Price/Fee ₹600 for two
+                                (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Near Old Bus Stand, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Grand Treat">
+                <div class="listing-info">
+                    <div class="card-title">Grand Treat</div>
+                    <p>Luxury family dining with a global menu.<br><strong>Timings 11:30 AM - 11:30
+                            PM</strong><br><strong><i class="fas fa-tag">
+                                Price/Fee ₹700 for two (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Chungathara Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item restaurant">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Riverside Dine">
+                <div class="listing-info">
+                    <div class="card-title">Riverside Dine</div>
+                    <p>A unique open-air dining experience by the river.<br><strong>Timings 07:00 AM - 11:00
+                            PM</strong><br><strong><i class="fas fa-tag">
+                                Price/Fee ₹450 for two (Approx)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Kozhikode Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item fuel">
+                <img src="https://images.unsplash.com/photo-1563220556-905c93c1f03f?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Bharath Petroleum">
+                <div class="listing-info">
+                    <div class="card-title">Bharath Petroleum</div>
+                    <p>Reliable fuel & lubricants with modern facilities.<br><strong>Timings 24 Hours
+                            Open</strong><br><strong><i class="fas fa-tag"> Price/Fee Current Market Rate</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Calicut Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item fuel">
+                <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="HP Petrol Pump">
+                <div class="listing-info">
+                    <div class="card-title">HP Petrol Pump</div>
+                    <p>Quick service hub located conveniently near the town center.<br><strong>Timings 06:00 AM -
+                            11:00 PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Current Market Rate</strong>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Town Center, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item fuel">
+                <img src="https://images.unsplash.com/photo-1618283307519-2f56b093158c?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Indian Oil">
+                <div class="listing-info">
+                    <div class="card-title">Indian Oil</div>
+                    <p>Quality fuel and reliable service for all performance vehicles.<br><strong>Timings Open
+                            24/7</strong><br><strong><i class="fas fa-tag"> Price/Fee Current Market Rate</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Mampad Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item fuel">
+                <img src="https://images.unsplash.com/photo-1516515429572-1b64413982f9?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Reliance Petroleum">
+                <div class="listing-info">
+                    <div class="card-title">Reliance Petroleum</div>
+                    <p>Advanced technology and automated fueling experience.<br><strong>Timings 06:00 AM - 11:00
+                            PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Current Market Rate</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Bypass Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item fuel">
+                <img src="https://images.unsplash.com/photo-1598282869400-9856a908990c?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Shell Express">
+                <div class="listing-info">
+                    <div class="card-title">Shell Express</div>
+                    <p>Superior fuel formulas and world-class service standards.<br><strong>Timings 05:00 AM
+                            - 12:00 AM</strong><br><strong><i class="fas fa-gas-pump"> Rates Petrol: ₹109.50 | Diesel:
+                                ₹98.20</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Near Chaliyar Bridge,
+                        Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item fuel">
+                <img src="https://images.unsplash.com/photo-1626084300762-5f7a3463249a?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Essar Fuel">
+                <div class="listing-info">
+                    <div class="card-title">Essar Fuel</div>
+                    <p>Consistency and trust for every long-distance journey.<br><strong>Timings
+                            06:00 AM - 11:00 PM</strong><br><strong><i class="fas fa-gas-pump"> Rates Petrol: ₹109.50 |
+                                Diesel: ₹98.20</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Edakkara Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1590424753042-95bc416515ed?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Teak Museum">
+                <div class="listing-info">
+                    <div class="card-title">Teak Museum</div>
+                    <p>The
+                        world's first teak museum, showcasing the history, biology, and uses of teak
+                        trees.<br><strong>Timings 10:00 AM - 04:30 PM</strong><br><strong><i class="fas fa-tag"> Entry
+                                Fee Adult: ₹20 | Child: ₹10</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Teak Museum Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Conolly's Plot">
+                <div class="listing-info">
+                    <div class="card-title">Conolly's Plot</div>
+                    <p>The
+                        world's oldest man-made teak plantation, established in the 1840s by H.V.
+                        Conolly.<br><strong>Timings 09:00 AM - 05:00 PM</strong><br><strong><i class="fas fa-tag"> Entry
+                                Fee Adult: ₹25 | Child: ₹10</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Canolly Plot Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1434725039720-bbdb6cd52ef0?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Adyanpara Waterfalls">
+                <div class="listing-info">
+                    <div class="card-title">Adyanpara Waterfalls</div>
+                    <p>A
+                        beautiful cascade in the village of Kurumbalangode, known for its scenic
+                        surroundings.<br><strong>Timings 08:00 AM - 06:00 PM</strong><br><strong><i class="fas fa-tag">
+                                Entry Fee Entry: ₹10 per head</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Adyanpara, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Nedumkayam Rainforest">
+                <div class="listing-info">
+                    <div class="card-title">Nedumkayam Rainforest</div>
+                    <p>Part of
+                        the Nilgiri Biosphere Reserve, rich in flora and fauna with a historic wooden
+                        bridge.<br><strong>Timings 09:00 AM - 04:00 PM</strong><br><strong><i class="fas fa-tag"> Entry
+                                Fee Adult: ₹40 | Vehicle extra</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Nedumkayam, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Nilambur Kovilakam">
+                <div class="listing-info">
+                    <div class="card-title">Nilambur Kovilakam</div>
+                    <p>Traditional residence of the local Rajas of Nilambur, famous for its
+                        architecture.<br><strong>Timings Exterior view always</strong><br><strong><i class="fas fa-tag">
+                                Entry Fee No Entry Fee</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Kovilakam Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="/images/kushumala.jpg" class="listing-img" alt="Kushumala Viewpoint">
+                <div class="listing-info">
+                    <div class="card-title">Kushumala Viewpoint</div>
+                    <p>A stunning hilltop near Akampadam offering 360-degree panoramic views, a ancient Devi temple, and
+                        a mysterious perennial pond.<br><strong>Timings: Best at Sunrise/Sunset</strong><br><strong><i
+                                class="fas fa-tag"></i> Entry Fee: Free Access</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> Akampadam, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.8!2d76.25!3d11.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x8888888888888888!2sKushumala%20Hilltop!5e0!3m2!1sen!2sin!4v1700000000000"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Banglavu Kunnu (Bungalow Hill)">
+                <div class="listing-info">
+                    <div class="card-title">Banglavu Kunnu (Bungalow Hill)</div>
+                    <p>Known for
+                        its winding roads and cool breeze, with views of the valley below.<br><strong>Timings Best in
+                            early morning/evening</strong><br><strong><i class="fas fa-tag"> Entry Fee Free
+                                Access</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Banglavu Kunnu, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Kakkadampoyil Hills">
+                <div class="listing-info">
+                    <div class="card-title">Kakkadampoyil Hills</div>
+                    <p>Often
+                        called the 'Ooty of Malappuram', this hill station is famous for its mist and
+                        waterfalls.<br><strong>Timings 24/7 (Viewpoints)</strong><br><strong><i class="fas fa-tag">
+                                Entry Fee Free / Location dependent</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Kakkadampoyil, Mallapuram
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Vellamthode Waterfalls">
+                <div class="listing-info">
+                    <div class="card-title">Vellamthode Waterfalls</div>
+                    <p>A hidden
+                        gem located deep inside the forest, perfect for nature lovers and trekking.<br><strong>Timings
+                            08:30 AM - 05:00 PM</strong><br><strong><i class="fas fa-tag"> Entry Fee Free
+                                Access</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Vellamthode, Karulai
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item tourist">
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="T.K. Colony Eco-Tourism">
+                <div class="listing-info">
+                    <div class="card-title">T.K. Colony Eco-Tourism</div>
+                    <p>An
+                        emerging eco-tourism destination with lush greenery and elephant sightings.<br><strong>Timings
+                            10:00 AM - 05:00 PM</strong><br><strong><i class="fas fa-tag"> Entry Fee Entry: ₹20 per
+                                head</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> T.K. Colony, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="listing-item shop">
+                <img src="https://images.unsplash.com/photo-1540638349517-3abd5afc5847?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Nilambur Teak Hub">
+                <div class="listing-info">
+                    <div class="card-title">Nilambur Teak Hub</div>
+                    <p>Famous for bespoke teak furniture and quality wood crafts.<br><strong>Timings 09:00 AM - 08:30
+                            PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Free Entry</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Main Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item shop">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Malabar Spices">
+                <div class="listing-info">
+                    <div class="card-title">Malabar Spices</div>
+                    <p>Freshly ground spices, pure honey, and local forest products.<br><strong>Timings 08:00 AM - 09:00
+                            PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Free Entry</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Local Market St, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item shop">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Woodland Crafts">
+                <div class="listing-info">
+                    <div class="card-title">Woodland Crafts</div>
+                    <p>Artistic hand-carved wooden sculptures and interior decor.<br><strong>Timings 10:00 AM - 07:00
+                            PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Free Entry</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Arts and Crafts Lane, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item shop">
+                <img src="/images/jamjoom.jpg" class="listing-img" alt="Jamjoom Hypermarket">
+                <div class="listing-info">
+                    <div class="card-title">Jamjoom Hypermarket</div>
+                    <p>The biggest hypermarket in Nilambur offering everything from groceries to
+                        electronics.<br><strong>Timings 09:00 AM - 10:30 PM</strong><br><strong><i class="fas fa-tag">
+                                Price/Fee Best Deals</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Chungathara Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item shop">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Nilambur Furniture Mall">
+                <div class="listing-info">
+                    <div class="card-title">Nilambur Furniture Mall</div>
+                    <p>Specialized in premium Nilambur teak dining sets and bedroom furniture.<br><strong>Timings 09:30
+                            AM - 08:00 PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Custom Pricing</strong>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Kozhikode Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="listing-item shop">
+                <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?auto=format&fit=crop&q=80&w=600"
+                    class="listing-img" alt="Maharani Silks">
+                <div class="listing-info">
+                    <div class="card-title">Maharani Silks</div>
+                    <p>One of the oldest and most trusted wedding silk showrooms in Nilambur.<br><strong>Timings 09:30
+                            AM - 08:30 PM</strong><br><strong><i class="fas fa-tag"> Price/Fee Wedding Specials</strong>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <i class="fa-solid fa-location-dot"></i> </i> Main Road, Nilambur
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn"
+                        style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Open in Maps</a>
+                </div>
+                <div class="listing-map">
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Modified filter function to handle multiple criteria
+        function filterListings(category, keyword = '', location = '') {
+            const items = document.querySelectorAll('.listing-item');
+            const tabs = document.querySelectorAll('.tab');
+            const searchStatus = document.getElementById('search-status');
+            const activeSearchText = document.getElementById('active-search-text');
+            const noResults = document.getElementById('no-results');
+
+            // Update tab styling
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (category === 'all') {
+                    if (tab.innerText.toLowerCase() === 'all') tab.classList.add('active');
+                } else {
+                    if (tab.onclick && tab.onclick.toString().includes(`'${category}'`)) tab.classList.add('active');
+                    // Fallback comparison
+                    if (tab.innerText.toLowerCase().includes(category)) tab.classList.add('active');
+                }
+            });
+
+            const searchLower = keyword.toLowerCase().trim();
+            const locationLower = location.toLowerCase().trim();
+
+            items.forEach(item => {
+                const title = item.querySelector('.card-title')?.innerText.toLowerCase() || '';
+                const info = item.querySelector('.listing-info')?.innerText.toLowerCase() || '';
+
+                const matchesCategory = (category === 'all' || item.classList.contains(category));
+                const matchesKeyword = !searchLower || (title.includes(searchLower) || info.includes(searchLower));
+                const matchesLocation = !locationLower || info.includes(locationLower);
+
+                if (matchesCategory && matchesKeyword && matchesLocation) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize filtering based on URL parameters
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat') || 'all';
+            const keyword = params.get('q') || '';
+            const loc = params.get('loc') || '';
+
+            // Apply filter
+            filterListings(cat, keyword, loc);
+
+            // Set active tab styling correctly if it was redirected
+            if (cat !== 'all') {
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.innerText.toLowerCase().includes(cat)) tab.classList.add('active');
+                });
+            }
+        };
+    </script>
+
+     
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+
+
+
+</body>
+
+</html>

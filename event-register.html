@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - Nilambur Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="background: #f8f9fa;">
+    
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing +</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section style="padding: 100px 5%;">
+        <div style="max-width: 600px; margin: 0 auto; background: white; padding: 3.5rem; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.02);">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Event Registration</h2>
+                <p style="opacity: 0.7;">Fill out the form below to secure your spot. You will receive a confirmation email shortly.</p>
+            </div>
+
+            <form id="event-reg-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="form-group">
+                    <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem;">Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; outline: none;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem;">Email Address</label>
+                    <input type="email" placeholder="Enter your email" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; outline: none;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem;">Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; outline: none;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem;">Number of Guests</label>
+                    <select style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; outline: none;">
+                        <option>1 Person</option>
+                        <option>2 People</option>
+                        <option>3 People</option>
+                        <option>Group (4+)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem;">Select Event</label>
+                    <select id="event-select" style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; outline: none;">
+                        <option value="1">Nilambur Pattu Utsavam</option>
+                        <option value="2">Monsoon Rain Walk</option>
+                        <option value="3">Teak Wood Expo 2026</option>
+                        <option value="4">Nilambur Teak Marathon</option>
+                        <option value="5">Chaliyar River Fest</option>
+                        <option value="6">Traditional Food Fair</option>
+                        <option value="7">Photography Workshop</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; padding: 1rem; border-radius: 12px; margin-top: 1rem;">Confirm Registration</button>
+            </form>
+        </div>
+    </section>
+
+    
+    
+                <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+
+    
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+
+    <script>
+        // Pre-select event from URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventId = urlParams.get('event');
+        if (eventId) {
+            document.getElementById('event-select').value = eventId;
+        }
+
+        document.getElementById('event-reg-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration Successful! We will contact you soon.');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilambur - The Land of Teak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Main Desktop Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Nilambur</h1>
+            <p>A story written in teak leaves and river songs.</p>
+        </div>
+    </header>
+
+    <!-- Category Nav moved here -->
+    <div class="category-nav"
+        style="background: #111; padding: 1.5rem 5%; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="category-container">
+            <a href="shops.html">SHOP</a>
+            <a href="places.html">PLACES TO VISIT</a>
+            <a href="stay.html">PLACES TO STAY</a>
+            <a href="restaurant.html">RESTAURANTS</a>
+            <a href="fuel.html">FUEL STATIONS</a>
+            <a href="listing.html">LISTING</a>
+        </div>
+    </div>
+
+    <!-- Search Section below Hero/Category -->
+    <section class="search-section"
+        style="padding: 2.5rem 5% 4rem; background: #111; position: relative; z-index: 1060;">
+        <div class="search-container">
+            <div class="search-widget"
+                style="background: #111; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
+                <div class="search-field">
+                    <i class="fas fa-location-dot"></i>
+                    <input type="text" id="search-location" placeholder="Location">
+                </div>
+                <div class="search-field">
+                    <i class="fas fa-eye"></i>
+                    <input type="text" id="search-keyword" placeholder="What are you looking for?">
+                </div>
+                <div class="search-field dropdown">
+                    <i class="fas fa-shapes"></i>
+                    <select id="search-category">
+                        <option value="all">All Categories</option>
+                        <option value="shop">Shops</option>
+                        <option value="tourist">Tourist Places</option>
+                        <option value="restaurant">Restaurants</option>
+                        <option value="fuel">Fuel Stations</option>
+                        <option value="stay">Places to Stay</option>
+                    </select>
+                </div>
+                <button class="search-submit" onclick="handleHeroSearch()">
+                    Search <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleHeroSearch() {
+            const location = document.getElementById('search-location').value;
+            const keyword = document.getElementById('search-keyword').value;
+            const category = document.getElementById('search-category').value;
+
+            let queryParams = new URLSearchParams();
+            if (location) queryParams.set('loc', location);
+            if (keyword) queryParams.set('q', keyword);
+            if (category) queryParams.set('cat', category);
+
+            window.location.href = `listing.html?${queryParams.toString()}`;
+        }
+    </script>
+
+    <!-- Events Section Banner -->
+    <section id="events-banner" onclick="location.href='events.html'"
+        style="cursor: pointer; padding: 4rem 5%; background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%); color: white; position: relative; overflow: hidden; margin: 2rem 5%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+        <div style="position: relative; z-index: 2; max-width: 800px;">
+            <span
+                style="display: block; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem; color: #a8dadc;">Nilambur
+                Highlights</span>
+            <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2;">Upcoming Events & Festivals</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.6;">Don't miss out on the
+                vibrant culture and seasonal happenings in the heart of the teak land. From traditional pattu utsavam to
+                modern wood expos.</p>
+            <div
+                style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; background: white; color: #1d3557; padding: 12px 30px; border-radius: 12px; transition: 0.3s; transform: translateY(0);">
+                Explore All Events <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+        <!-- Decorative elements -->
+        <i class="fas fa-calendar-star"
+            style="position: absolute; right: -20px; bottom: -40px; font-size: 18rem; opacity: 0.1; transform: rotate(-15deg);"></i>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2 class="section-title">Welcome to Nilambur</h2>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; line-height: 1.8;">Nilambur is not just a town; it is a story written in teak
+                leaves and river songs. From its royal heritage and historic plantations to its modern eco-tourism
+                initiatives, Nilambur stands as a perfect blend of history and nature. The Chaliyar River flows through
+                its heart, carrying centuries of memories, while the forests whisper stories of strength and beauty.</p>
+        </div>
+    </section>
+
+    <!-- Shop Slider Section -->
+    <section id="shops">
+        <h2 class="section-title">Latest Shop Listings</h2>
+        <div class="slider-container" id="shop-slider">
+            <div class="slider-track" id="shop-track">
+                <!-- Shop 1: Nilambur Teak Hub -->
+                <div class="card" onclick="location.href='shop-detail-1.html'">
+                    <img src="https://images.unsplash.com/photo-1540638349517-3abd5afc5847?auto=format&fit=crop&q=80&w=600"
+                        alt="Nilambur Teak Hub">
+                    <div class="card-content">
+                        <div class="card-title">Nilambur Teak Hub</div>
+                        <p class="card-desc">Famous for bespoke teak furniture and quality wood crafts.</p>
+                    </div>
+                </div>
+                <!-- Shop 2: Malabar Spices -->
+                <div class="card" onclick="location.href='shop-detail-2.html'">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600"
+                        alt="Malabar Spices">
+                    <div class="card-content">
+                        <div class="card-title">Malabar Spices</div>
+                        <p class="card-desc">Freshly ground spices, pure honey, and local forest products.</p>
+                    </div>
+                </div>
+                <!-- Shop 3: Woodland Crafts -->
+                <div class="card" onclick="location.href='shop-detail-3.html'">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600"
+                        alt="Woodland Crafts">
+                    <div class="card-content">
+                        <div class="card-title">Woodland Crafts</div>
+                        <p class="card-desc">Artistic hand-carved wooden sculptures and interior decor.</p>
+                    </div>
+                </div>
+                <!-- Shop 4: Jamjoom Hypermarket -->
+                <div class="card" onclick="location.href='shop-detail-4.html'">
+                    <img src="/images/jamjoom.jpg" alt="Jamjoom Hypermarket">
+                    <div class="card-content">
+                        <div class="card-title">Jamjoom Hypermarket</div>
+                        <p class="card-desc">The biggest hypermarket in Nilambur offering everything from groceries to
+                            electronics.</p>
+                    </div>
+                </div>
+                <!-- Shop 5: Nilambur Furniture Mall -->
+                <div class="card" onclick="location.href='shop-detail-5.html'">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=600"
+                        alt="Nilambur Furniture Mall">
+                    <div class="card-content">
+                        <div class="card-title">Nilambur Furniture Mall</div>
+                        <p class="card-desc">Specialized in premium Nilambur teak dining sets and bedroom furniture.</p>
+                    </div>
+                </div>
+                <!-- Shop 6: Maharani Silks -->
+                <div class="card" onclick="location.href='shop-detail-6.html'">
+                    <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?auto=format&fit=crop&q=80&w=600"
+                        alt="Maharani Silks">
+                    <div class="card-content">
+                        <div class="card-title">Maharani Silks</div>
+                        <p class="card-desc">One of the oldest and most trusted wedding silk showrooms in Nilambur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="shops.html" class="btn btn-center">See All Shops</a>
+    </section>
+
+
+    <!-- Places to Visit Slider Section -->
+    <section id="places" style="background: #e9f0e8;">
+        <h2 class="section-title">The Latest Places to Visit</h2>
+        <div class="slider-container" id="place-slider">
+            <div class="slider-track" id="place-track">
+                <!-- Place Card 1 -->
+                <div class="card" onclick="location.href='place-detail-1.html'">
+                    <img src="/images/teak 1.png" alt="Teak Museum">
+                    <div class="card-content">
+                        <div class="card-title">Teak Museum</div>
+                        <p class="card-desc">The world's first teak museum, showcasing history and biology.</p>
+                    </div>
+                </div>
+                <!-- Place Card 2 -->
+                <div class="card" onclick="location.href='place-detail-2.html'">
+                    <img src="/images/canoli 1.png" alt="Conolly's Plot">
+                    <div class="card-content">
+                        <div class="card-title">Conolly's Plot</div>
+                        <p class="card-desc">The oldest teak plantation in the world, established in 1840s.</p>
+                    </div>
+                </div>
+                <!-- Place Card 3 -->
+                <div class="card" onclick="location.href='place-detail-3.html'">
+                    <img src="/images/adyanpara 2.png" alt="Adyanpara Waterfalls">
+                    <div class="card-content">
+                        <div class="card-title">Adyanpara Waterfalls</div>
+                        <p class="card-desc">A beautiful cascade nestled in the dense forest.</p>
+                    </div>
+                </div>
+                <!-- Place Card 4 -->
+                <div class="card" onclick="location.href='place-detail-4.html'">
+                    <img src="/images/nedukaym 2.png" alt="Nedumkayam Rainforest">
+                    <div class="card-content">
+                        <div class="card-title">Nedumkayam Rainforest</div>
+                        <p class="card-desc">Rich biodiversity and a wooden bridge built by the British.</p>
+                    </div>
+                </div>
+                <!-- Place Card 5 -->
+                <div class="card" onclick="location.href='place-detail-5.html'">
+                    <img src="/images/kovilam 2.png" alt="Kovilakam">
+                    <div class="card-content">
+                        <div class="card-title">Nilambur Kovilakam</div>
+                        <p class="card-desc">Ancient residence of the local Rajas with traditional architecture.</p>
+                    </div>
+                </div>
+                <!-- Place Card 6 -->
+                <div class="card" onclick="location.href='place-detail-6.html'">
+                    <img src="/images/kurushumpara 1.png" alt="Kushumala Viewpoint">
+                    <div class="card-content">
+                        <div class="card-title">Kushumala Viewpoint</div>
+                        <p class="card-desc">360-degree panoramic views and a historic Devi temple near Akampadam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="places.html" class="btn btn-center">See All Places</a>
+    </section>
+
+    <!-- Places to Stay Slider Section -->
+    <section id="stay" style="padding: 4rem 5%; background: #f9f9f9;">
+        <h2 class="section-title">Places to Stay</h2>
+        <div class="slider-container" id="stay-slider">
+            <div class="slider-track" id="stay-track">
+
+                <div class="card" onclick="location.href='stay-detail-1.html'">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=600"
+                        alt="Rosewood Residency">
+                    <div class="card-content">
+                        <div class="card-title">Rosewood Residency</div>
+                        <p class="card-desc">Luxury and comfort in the heart of Nilambur town.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='stay-detail-2.html'">
+                    <img src="/images/teak town 1.png" alt="Teak Town Homestay">
+                    <div class="card-content">
+                        <div class="card-title">Teak Town Homestay</div>
+                        <p class="card-desc">Experience traditional Nilambur hospitality at its best.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='stay-detail-3.html'">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600"
+                        alt="Riverview Retreat">
+                    <div class="card-content">
+                        <div class="card-title">Riverview Retreat</div>
+                        <p class="card-desc">A peaceful stay right along the banks of the Chaliyar.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='stay-detail-4.html'">
+                    <img src="/images/manor 1 (1).png" alt="Nilambur Manor">
+                    <div class="card-content">
+                        <div class="card-title">Nilambur Manor</div>
+                        <p class="card-desc">Modern amenities with a touch of royal heritage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='stay-detail-5.html'">
+                    <img src="/images//green resort 1.png" alt="Green Garden Resort">
+                    <div class="card-content">
+                        <div class="card-title">Green Garden Resort</div>
+                        <p class="card-desc">Stay
+                            surrounded by lush greenery and private gardens.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='stay-detail-6.html'">
+                    <img src="/images/Jungle Edge Farmhouse 2.jpg" alt="Jungle Edge Farmhouse">
+                    <div class="card-content">
+                        <div class="card-title">Jungle Edge Farmhouse</div>
+                        <p class="card-desc">A unique farmhouse experience on the edge of the forest.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a href="stay.html" class="btn btn-center">See All Places to Stay</a>
+    </section>
+
+    <!-- Best Restaurants Slider Section -->
+    <section id="restaurants" style="padding: 4rem 5%; background: #f9f9f9;">
+        <h2 class="section-title">Best Restaurants</h2>
+        <div class="slider-container" id="restaurants-slider">
+            <div class="slider-track" id="restaurants-track">
+
+                <div class="card" onclick="location.href='restaurant-detail-1.html'">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=600"
+                        alt="Town Kitchen">
+                    <div class="card-content">
+                        <div class="card-title">Town Kitchen</div>
+                        <p class="card-desc">Multi-cuisine delights in the heart of the city.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-2.html'">
+                    <img src="/images/malabar 2.png" alt="Malabar Cafe">
+                    <div class="card-content">
+                        <div class="card-title">Malabar Cafe</div>
+                        <p class="card-desc">Authentic Malabar flavors and local delicacies.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-3.html'">
+                    <img src="/images/woodbine 1.png" alt="Woodbine Restaurant">
+                    <div class="card-content">
+                        <div class="card-title">Woodbine Restaurant</div>
+                        <p class="card-desc">Dining with a serene view of nature.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-4.html'">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e03ad3?auto=format&fit=crop&q=80&w=600"
+                        alt="Highway Dine">
+                    <div class="card-content">
+                        <div class="card-title">Highway Dine</div>
+                        <p class="card-desc">The perfect pitstop for travelers on the move.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-5.html'">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600"
+                        alt="Spice Village">
+                    <div class="card-content">
+                        <div class="card-title">Spice Village</div>
+                        <p class="card-desc">Explore the world through our spicy specialties.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-6.html'">
+                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&q=80&w=600"
+                        alt="Coffee House">
+                    <div class="card-content">
+                        <div class="card-title">Coffee House</div>
+                        <p class="card-desc">Vintage vibes and classic South Indian tastes.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-7.html'">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+                        alt="Grand Treat">
+                    <div class="card-content">
+                        <div class="card-title">Grand Treat</div>
+                        <p class="card-desc">Luxury family dining with a global menu.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='restaurant-detail-8.html'">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
+                        alt="Riverside Dine">
+                    <div class="card-content">
+                        <div class="card-title">Riverside Dine</div>
+                        <p class="card-desc">A unique open-air dining experience by the river.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a href="restaurant.html" class="btn btn-center">See All Best Restaurants</a>
+    </section>
+
+    <!-- Fuel Stations Slider Section -->
+    <section id="fuel" style="padding: 4rem 5%; background: #f9f9f9;">
+        <h2 class="section-title">Fuel Stations</h2>
+        <div class="slider-container" id="fuel-slider">
+            <div class="slider-track" id="fuel-track">
+
+                <div class="card" onclick="location.href='fuel-detail-1.html'">
+                    <img src="/images/bharat.webp" alt="Bharath Petroleum">
+                    <div class="card-content">
+                        <div class="card-title">Bharath Petroleum</div>
+                        <p class="card-desc">Reliable fuel & lubricants with modern facilities.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='fuel-detail-2.html'">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&q=80&w=600"
+                        alt="HP Petrol Pump">
+                    <div class="card-content">
+                        <div class="card-title">HP Petrol Pump</div>
+                        <p class="card-desc">Quick service hub located conveniently near the town center.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='fuel-detail-3.html'">
+                    <img src="https://images.unsplash.com/photo-1618283307519-2f56b093158c?auto=format&fit=crop&q=80&w=600"
+                        alt="Indian Oil">
+                    <div class="card-content">
+                        <div class="card-title">Indian Oil</div>
+                        <p class="card-desc">Quality fuel and reliable service for all performance vehicles.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='fuel-detail-4.html'">
+                    <img src="https://images.unsplash.com/photo-1516515429572-1b64413982f9?auto=format&fit=crop&q=80&w=600"
+                        alt="Reliance Petroleum">
+                    <div class="card-content">
+                        <div class="card-title">Reliance Petroleum</div>
+                        <p class="card-desc">Advanced technology and automated fueling experience.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='fuel-detail-5.html'">
+                    <img src="https://images.unsplash.com/photo-1598282869400-9856a908990c?auto=format&fit=crop&q=80&w=600"
+                        alt="Shell Express">
+                    <div class="card-content">
+                        <div class="card-title">Shell Express</div>
+                        <p class="card-desc">Superior fuel formulas and world-class service standards.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="location.href='fuel-detail-6.html'">
+                    <img src="https://images.unsplash.com/photo-1626084300762-5f7a3463249a?auto=format&fit=crop&q=80&w=600"
+                        alt="Essar Fuel">
+                    <div class="card-content">
+                        <div class="card-title">Essar Fuel</div>
+                        <p class="card-desc">Consistency and trust for every long-distance journey.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a href="fuel.html" class="btn btn-center">See All Fuel Stations</a>
+    </section>
+
+
+
+     
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+
+
+
+
+</body>
+
+</html>

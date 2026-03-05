@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Restaurants in Nilambur - Nilambur Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="detail-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/restuurant.webp'); background-size: cover; background-position: center;">
+        <h1 style="font-size: 3.5rem;">Best Restaurants in Nilambur</h1>
+        <p>Explore the finest dining experiences, from authentic Malabar cuisine to global flavors.</p>
+    </header>
+
+    <!-- Category Nav -->
+    <div class="category-nav">
+        <div class="category-container">
+            <a href="shops.html">SHOP</a>
+            <a href="places.html">PLACES TO VISIT</a>
+            <a href="stay.html">PLACES TO STAY</a>
+            <a href="restaurant.html">RESTAURANTS</a>
+            <a href="fuel.html">FUEL STATIONS</a>
+            <a href="listing.html">LISTING</a>
+        </div>
+    </div>
+
+    <section style="padding: 4rem 5%;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 3rem;">
+
+                <!-- Restaurant 1 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-1.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Town Kitchen</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Multi-cuisine delights in the heart of the city.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                11:00 AM - 11:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹500 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Bypass Road, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 2 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-2.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="/images/malabar1.webp" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Malabar Cafe</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Authentic
+                            Malabar flavors and local delicacies.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                12:00 PM - 10:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹400 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Near Teak Museum, Nilambur
+                        </p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.4150371458925!2d76.2215901148039!3d11.313070991958611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sTeak+Museum!5e0!3m2!1sen!2sin!4v1709620000000!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Teak+Museum+Nilambur"
+                            target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 3 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-3.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="/images/woodbine 1.png" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Woodbine Restaurant</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Dining
+                            with a serene view of nature.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                07:30 AM - 09:30 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹250 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Main Road, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.623456789!2d76.223456!3d11.272345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fb643594f87%3A0x1111111111111111!2sWoodbine+Restaurant!5e0!3m2!1sen!2sin!4v1709620000000!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Woodbine+Restaurant+Nilambur"
+                            target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 4 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-4.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e03ad3?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Highway Dine</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">The
+                            perfect pitstop for travelers on the move.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                08:00 AM - 10:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹350 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Janathapadi, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 5 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-5.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Spice Village</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Explore
+                            the world through our spicy specialties.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                04:00 PM - 12:00 AM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹300 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Near Railway Station,
+                            Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 6 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-6.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Coffee House</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Vintage
+                            vibes and classic South Indian tastes.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                12:00 PM - 12:00 AM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹600 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Near Old Bus Stand, Nilambur
+                        </p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 7 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-7.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Grand Treat</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Luxury
+                            family dining with a global menu.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                11:30 AM - 11:30 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹700 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Chungathara Road, Nilambur
+                        </p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant 8 -->
+                <div class="listing-card" onclick="location.href='restaurant-detail-8.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Riverside Dine</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">A unique
+                            open-air dining experience by the river.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                07:00 AM - 11:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                ₹450 for two
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Kozhikode Road, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

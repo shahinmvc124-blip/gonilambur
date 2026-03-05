@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilambur – The Land of Teak and Timeless Beauty | Official Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --blog-bg: #fff;
+            --accent-green: #2d6a4f;
+        }
+
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 5% 10rem;
+            background: var(--blog-bg);
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .blog-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+
+        .featured-img-container {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            height: 80vh;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 6rem;
+        }
+
+        .featured-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-body {
+            font-size: 1.25rem;
+            line-height: 1.85;
+            color: #333;
+        }
+
+        .blog-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 5rem 0 2rem;
+            color: #111;
+            position: relative;
+        }
+
+        .blog-body h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .blog-body h3 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .quote-box {
+            background: #f8fcf8;
+            border-left: 8px solid var(--primary);
+            padding: 3rem;
+            margin: 4rem 0;
+            border-radius: 0 30px 30px 0;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+        }
+
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f0f4f0;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-box {
+            background: #111;
+            color: white;
+            padding: 3rem;
+            border-radius: 30px;
+            margin: 5rem 0;
+        }
+
+        .img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .img-grid img {
+            width: 100%;
+            border-radius: 20px;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        .dark-mode .blog-container {
+            background: #111;
+        }
+
+        .dark-mode .blog-body {
+            color: #ccc;
+        }
+
+        .dark-mode .blog-header h1 {
+            color: #fff;
+        }
+
+        .dark-mode .blog-body h2 {
+            color: #fff;
+        }
+
+        .dark-mode .quote-box {
+            background: #1a1a1a;
+            color: #fff;
+        }
+    </style>
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="blog-container">
+        <header class="blog-header">
+            <div
+                style="display: flex; justify-content: center; gap: 2rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 2rem;">
+                <span>By Nilambur Guide</span><span>•</span><span>15 Min Read</span><span>•</span><span>Travel
+                    Guide</span>
+            </div>
+            <h1>Nilambur – The Land of Teak and Timeless Beauty</h1>
+            <p style="font-size: 1.3rem; opacity: 0.7; max-width: 700px; margin: 0 auto;">A journey through the emerald
+                corridors of Kerala's most historic timber sanctuary, where every leaf tells a royal story.</p>
+        </header>
+
+        <div class="featured-img-container">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920"
+                alt="Nilambur Rain Forest">
+        </div>
+
+        <div class="blog-body">
+            <p><strong>Nilambur</strong>, often called the Land of Teak, is one of Kerala’s most beautiful hidden gems.
+                Surrounded by lush green forests, flowing rivers, and rich history, Nilambur offers a peaceful escape
+                from city life. Located in Malappuram district, this charming town is famous for its teak plantations,
+                wildlife, and scenic landscapes.</p>
+
+            <p>For someone seeking <strong>Nilambur tourism</strong>, this isn't just a destination on a map; it's an
+                experience that settles deep in your soul. Whether you are walking through the golden-lit aisles of the
+                world's oldest <strong>Nilambur teak forest</strong> or sitting by the riverbanks during a quiet sunset,
+                Nilambur reveals itself as a sanctuary of history and nature combined.</p>
+
+            <h2>1. The Living Legacy: Conolly’s Plot</h2>
+            <div class="location-tag"><i class="fas fa-location-dot"></i> 2km from Nilambur Town</div>
+            <p>To understand Nilambur, one must start at <strong>Conolly’s Plot</strong>. Named after H.V. Conolly, the
+                then Collector of Malabar during the British period, this is officially the <strong>world’s oldest
+                    man-made teak plantation</strong>. Established in the mid-1840s, it was a pioneering effort in
+                sustainable forestry that changed the landscape of the region forever.</p>
+            <p>Stepping into Conolly’s Plot feels like entering a natural cathedral. The teak trees here are massive,
+                reaching for the heavens with trunks that have witnessed over 170 years of history. Walking here, you
+                realize that <strong>places to visit in Nilambur</strong> are about legacy, not just sight-seeing.</p>
+
+            <div class="img-grid">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600"
+                    alt="Teak Forest">
+                <img src="https://images.unsplash.com/photo-1596395819057-e37f55a85171?auto=format&fit=crop&q=80&w=600"
+                    alt="Nature Path">
+            </div>
+
+            <h2>2. A Tribute to the Queen of Wood: Teak Museum</h2>
+            <div class="location-tag"><i class="fas fa-landmark"></i> 4km from town</div>
+            <p>Often included in any <strong>Nilambur travel guide</strong>, the <strong>Teak Museum</strong> is a
+                world-class institution and the only one of its kind in India. It houses detailed exhibits on the
+                biology, history, and diverse uses of teak wood. From the massive roots of a 480-year-old tree to the
+                history of the British Royal Navy's ships built from this very wood, the museum is fascinating.</p>
+
+            <div class="quote-box">
+                "Nilambur is where nature doesn't just grow; it speaks. It speaks through the rustling of teak leaves
+                and the ancient wisdom of its royal soil."
+            </div>
+
+            <h2>3. Chaliyar River: The Emerald Lifeline</h2>
+            <div class="location-tag"><i class="fas fa-droplet"></i> Flows through Nilambur</div>
+            <p>The <strong>Chaliyar River</strong> is the pulse of Nilambur. For centuries, it served as the highway for
+                timber trade. Rafts of massive logs were floated downstream to the sea. Its beautiful river views and
+                the reflection of the dense forest canopy on the water make it a photographer's dream.</p>
+
+            <h2>4. Into the Deep Green: Nedumkayam Rainforest</h2>
+            <div class="location-tag"><i class="fas fa-tree"></i> 15km from town center</div>
+            <p><strong>Nedumkayam Rainforest</strong> is a must for wildlife lovers. Part of the Nilgiri Biosphere
+                Reserve, it is a dense, wild area where elephant sightings are common. The air is cooler, and the
+                biodiversity is staggering. The wooden bridge from the British era is a classic landmark here.</p>
+
+            <h2>5. The Most Scenic Journey: Nilambur Railway Station</h2>
+            <div class="location-tag"><i class="fas fa-train"></i> Railway Station Road</div>
+            <p>The <strong>Shoranur–Nilambur railway line</strong> is one of the most scenic railway routes in India.
+                Traveling through small stations covered in greenery and ancient bridges makes this journey deeply
+                emotional and nostalgic. The Nilambur station itself is surrounded by tall trees and offers a peaceful
+                atmosphere.</p>
+
+            <h2>6. Culture and Flavors of Malabar</h2>
+            <p>Nilambur’s culture is defined by its simple village life and deep connection to the forest. The tribal
+                communities, particularly the Cholanaikkans, add a unique layer to its cultural richness.</p>
+            <h3>A Taste of Malabar</h3>
+            <p>Traditional food in Nilambur is a delight. From the morning staple of <strong>Puttu and Kadala
+                    curry</strong> to the aromatic and famous <strong>Malabar Biryani</strong>, the flavors are
+                authentic and rich. Local tea shops (Chayakada) offer delicious snacks like banana fritters and
+                Sulaimani tea.</p>
+
+            <div class="sidebar-box">
+                <h4 style="color:white;">Plan Your Visit</h4>
+                <ul style="list-style:none; padding:0;">
+                    <li><i class="fas fa-circle-check"></i> Best Time: Post-monsoon (Sep-Mar)</li>
+                    <li><i class="fas fa-circle-check"></i> Stay: Local homestays for the best experience</li>
+                    <li><i class="fas fa-circle-check"></i> Wear: Comfortable walking shoes for forest treks</li>
+                </ul>
+            </div>
+
+            <h2>Conclusion</h2>
+            <p>Nilambur is a timeless testament to Kerala's natural and cultural wealth. It invites you to slow down and
+                listen to the pulse of the earth. We hope this <strong>Nilambur travel guide</strong> helps you plan
+                your perfect escape into the woods.</p>
+
+
+        </div>
+    </article>
+
+
+                <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+
+
+
+
+</body>
+
+</html>

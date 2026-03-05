@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Nilambur - Nilambur Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="detail-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center;">
+        <h1 style="font-size: 3.5rem;">Events in Nilambur</h1>
+        <p>Stay updated with the latest cultural, seasonal, and community happenings</p>
+    </header>
+
+    <!-- Category Nav -->
+    <div class="category-nav">
+        <div class="category-container">
+            <a href="shops.html">SHOP</a>
+            <a href="places.html">PLACES TO VISIT</a>
+            <a href="stay.html">PLACES TO STAY</a>
+            <a href="restaurant.html">RESTAURANTS</a>
+            <a href="fuel.html">FUEL STATIONS</a>
+            <a href="listing.html">LISTING</a>
+        </div>
+    </div>
+
+    <section style="padding: 5rem 5%;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 3rem;">
+
+                <!-- Event 1 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1514525253361-bee243870eb2?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: var(--primary); color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            UPCOMING
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Cultural Festival</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Nilambur Pattu Utsavam</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">A
+                            traditional folk song festival celebrated at the Nilambur Kovilakam premises. It includes
+                            traditional rituals, folk music (Pattu), and cultural performances that have been passed
+                            down for generations.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>March 15 - March 22, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>Nilambur Kovilakam Grounds</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-1.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=1" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1467307983825-619715426c70?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: #6c757d; color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            SEASONAL
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Nature & Adventure</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Monsoon Rain Walk</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Experience
+                            the Nilambur rainforests in their full glory during the monsoon. A guided trekking
+                            experience through the teak woods.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>June 10 - July 30, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>Nedumkayam Rainforest</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-2.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=2" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: var(--primary); color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            UPCOMING
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Exhibition</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Teak Wood Expo 2026</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Annual
+                            exhibition of premium teak wood furniture and handcrafted artifacts. Direct sale from local
+                            artisans.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>April 05 - April 15, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>Nilambur Town Square</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-3.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=3" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1452626012306-972c7a92da50?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: var(--primary); color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            UPCOMING
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Sports</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Nilambur Teak Marathon</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Run through
+                            the world's oldest teak plantation. A scenic marathon route covering 10km, 21km and full
+                            marathon categories.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>May 20, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>Canolly Plot Entry</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-4.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=4" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1544526226-d45680d21f21?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: #6c757d; color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            SEASONAL
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Water Sports</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Chaliyar River Fest</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">A
+                            celebration of the Chaliyar river with boat races, kayaking competitions, and riverside food
+                            stalls.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>August 15 - August 20, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>River Side Park, Nilambur</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-5.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=5" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: var(--primary); color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            UPCOMING
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Food & Life</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Traditional Food Fair</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Taste the
+                            authentic flavors of Nilambur. Featuring tribal cuisines, Malabar snacks, and organic
+                            products.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>September 12 - September 18, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>Government College Ground</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-6.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=6" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 7 -->
+                <div class="listing-card"
+                    style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80&w=1200"
+                            style="width: 100%; height: 260px; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 20px; right: 20px; background: #6c757d; color: white; padding: 8px 15px; border-radius: 10px; font-weight: 700; font-size: 0.8rem;">
+                            SEASONAL
+                        </div>
+                    </div>
+                    <div style="padding: 2.5rem;">
+                        <div
+                            style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                            Art & Hobby</div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Photography Workshop</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Two-day
+                            workshop on nature and wildlife photography by expert photographers in the scenic Adyanpara
+                            area.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-calendar-days" style="color: var(--primary); width: 20px;"></i>
+                                <span>October 24 - October 25, 2026</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; font-size: 0.9rem; opacity: 0.9;">
+                                <i class="fas fa-location-dot" style="color: var(--primary); width: 20px;"></i>
+                                <span>Adyanpara Forest Hall</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="event-detail-7.html" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem;">View
+                                Details</a>
+                            <a href="event-register.html?event=7" class="btn"
+                                style="flex: 1; text-align: center; border-radius: 12px; padding: 0.8rem; font-size: 0.9rem; background: #222;">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+
+
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+</body>
+
+</html>

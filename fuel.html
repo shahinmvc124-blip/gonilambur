@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Stations in Nilambur - Nilambur Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NILAMBUR</a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="listing.html">Listing</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="login.html" class="add-listing-btn">Add Listing <i class="fas fa-plus"></i></a>
+                <a href="#" class="search-trigger"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="detail-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1563220556-905c93c1f03f?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center;">
+        <h1 style="font-size: 3.5rem;">Fuel Stations in Nilambur</h1>
+        <p>Find the nearest fuel stations and charging points for your journey.</p>
+    </header>
+
+    <!-- Category Nav -->
+    <div class="category-nav">
+        <div class="category-container">
+            <a href="shops.html">SHOP</a>
+            <a href="places.html">PLACES TO VISIT</a>
+            <a href="stay.html">PLACES TO STAY</a>
+            <a href="restaurant.html">RESTAURANTS</a>
+            <a href="fuel.html">FUEL STATIONS</a>
+            <a href="listing.html">LISTING</a>
+        </div>
+    </div>
+
+    <section style="padding: 4rem 5%;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 3rem;">
+
+                <!-- Fuel Station 1 -->
+                <div class="listing-card" onclick="location.href='fuel-detail-1.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="/images/bharat.webp" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Bharath Petroleum</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Reliable fuel & lubricants with modern facilities.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                24 Hours Open
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                Market Rate
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> SH 28, Nilambur Town</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.623456789!2d76.223456!3d11.272345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fb643594f87%3A0x1111111111111111!2sBharat+Petroleum+Petrol+Pump!5e0!3m2!1sen!2sin!4v1709620000000!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Bharat+Petroleum+Nilambur"
+                            target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Fuel Station 2 -->
+                <div class="listing-card" onclick="location.href='fuel-detail-2.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">HP Petrol Pump</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Quick service hub located conveniently near the town center.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                06:00 AM - 11:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                Market Rate
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Town Center, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Fuel Station 3 -->
+                <div class="listing-card" onclick="location.href='fuel-detail-3.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1618283307519-2f56b093158c?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Indian Oil</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Quality fuel and reliable service for all performance vehicles.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                Open 24/7
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                Market Rate
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Mampad Road, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Fuel Station 4 -->
+                <div class="listing-card" onclick="location.href='fuel-detail-4.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1516515429572-1b64413982f9?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Reliance Petroleum</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Advanced technology and automated fueling experience.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                06:00 AM - 11:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-tag"></i> Rate</span>
+                                Market Rate
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Bypass Road, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Fuel Station 5 -->
+                <div class="listing-card" onclick="location.href='fuel-detail-5.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1598282869400-9856a908990c?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Shell Express</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Superior fuel formulas and world-class service standards.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                05:00 AM - 12:00 AM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-gas-pump"></i> Rates</span>
+                                Petrol: ₹109.50 | Diesel: ₹98.20
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Near Chaliyar Bridge,
+                            Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+                <!-- Fuel Station 6 -->
+                <div class="listing-card" onclick="location.href='fuel-detail-6.html'"
+                    style="background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1626084300762-5f7a3463249a?auto=format&fit=crop&q=80&w=600"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Essar Fuel</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Consistency and trust for every long-distance journey.</p>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 12px;">
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-clock"></i> Timings</span>
+                                06:00 AM - 11:00 PM
+                            </div>
+                            <div style="font-size: 0.85rem;">
+                                <span style="display: block; font-weight: 700; color: var(--primary);"><i
+                                        class="fas fa-gas-pump"></i> Rates</span>
+                                Petrol: ₹109.50 | Diesel: ₹98.20
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-location-dot" style="margin-right: 8px;"></i> Edakkara Road, Nilambur</p>
+                        <div style="height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.45!2d76.22!3d11.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63fbc1d23605d%3A0x6e930f3a47926e85!2sNilambur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="btn"
+                            style="width: 100%; text-align: center; border-radius: 12px;">Get Navigation</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand">
+                <a href="index.html" class="footer-logo-footer">
+                    <div class="footer-logo-icon">N</div>
+                    <div class="footer-logo-text">NILAMBUR</div>
+                </a>
+                <p>Our mission is to empower you to explore the serene beauty, rich teak heritage, and cultural vibrancy
+                    of Nilambur, delivered through a seamless digital experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="places.html">Tourist Places</a></li>
+                    <li><a href="shops.html">Local Shops</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="blog.html">Travel Blog</a></li>
+                    <li><a href="listing.html">All Listings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Add Listing</a></li>
+                </ul>
+                <div class="footer-badge" style="margin-top: 2rem; opacity: 0.8;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo_of_Kerala_Tourism.svg/1200px-Logo_of_Kerala_Tourism.svg.png"
+                        alt="Kerala Tourism" style="height: 50px;">
+                </div>
+            </div>
+
+            <div class="footer-column office-info">
+                <h3>Office Address</h3>
+                <p><i class="fas fa-location-dot" style="margin-right: 10px; color: var(--primary);"></i> 3208 E Main St
+                    #301<br>Nilambur, KL 679329</p>
+                <p><a href="mailto:info@nilambur.com"><i class="fas fa-envelope"
+                            style="margin-right: 10px; color: var(--primary);"></i> info@nilambur.com</a></p>
+                <p><a href="tel:+914832221234"><i class="fas fa-phone"
+                            style="margin-right: 10px; color: var(--primary);"></i> (483) 222-1234</a></p>
+            </div>
+        </div>
+
+        <div class="footer-divider-line"></div>
+
+        <div class="footer-bottom-row">
+            <p>&copy; 2026 Nilambur Guide. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        <a href="listing.html"><i class="fas fa-list"></i>Listing</a>
+        <a href="events.html"><i class="fas fa-calendar-star"></i>Events</a>
+        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
