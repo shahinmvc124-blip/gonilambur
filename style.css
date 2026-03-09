@@ -604,7 +604,11 @@ section {
     }
 
     .card {
-        min-width: 80%;
+        min-width: 100%;
+    }
+
+    .slider-track {
+        gap: 0;
     }
 
     section {

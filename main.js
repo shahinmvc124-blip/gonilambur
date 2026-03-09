@@ -115,7 +115,8 @@ function initSlider(trackId) {
 
     function move() {
         currentPos++;
-        const cardWidth = track.firstElementChild.offsetWidth + 20;
+        const gap = parseInt(window.getComputedStyle(track).gap) || 0;
+        const cardWidth = track.firstElementChild.offsetWidth + gap;
 
         track.style.transition = 'transform 0.6s ease-in-out';
         track.style.transform = `translateX(-${currentPos * cardWidth}px)`;
